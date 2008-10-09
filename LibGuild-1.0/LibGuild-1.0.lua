@@ -1,5 +1,5 @@
 local MAJOR_VERSION = "LibGuild-1.0"
-local MINOR_VERSION = tonumber(("$Revision$"):match("%d+")) or 0
+local MINOR_VERSION = 90000 + tonumber(("$Revision$"):match("%d+")) or 0
 
 local lib, oldMinor = LibStub:NewLibrary(MAJOR_VERSION, MINOR_VERSION)
 if not lib then return end
