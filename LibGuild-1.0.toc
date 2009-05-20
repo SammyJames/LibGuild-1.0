@@ -1,4 +1,4 @@
-## Interface: 20400
+## Interface: 30100
 ## LoadOnDemand: 1
 ## Title: Lib: Guild-1.0
 ## Notes: Guild members
