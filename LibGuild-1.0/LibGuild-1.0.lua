@@ -99,9 +99,9 @@ local firstScanDone = false
 
 -- Hooking the OnShow, which registers the event, to unregister it
 -- so that the Guild Control Panel will not "reset" every 15 seconds
-hooksecurefunc("GuildControlPopupFrame_OnShow", function()
-	GuildControlPopupFrame:UnregisterEvent("GUILD_ROSTER_UPDATE")
-end)
+-- hooksecurefunc("GuildControlPopupFrame_OnShow", function()
+-- 	GuildControlPopupFrame:UnregisterEvent("GUILD_ROSTER_UPDATE")
+-- end)
 
 function frame:PLAYER_GUILD_UPDATE(unit)
 	if unit and unit ~= 'player' then return end
@@ -184,7 +184,7 @@ function frame:GUILD_ROSTER_UPDATE()
 				playersOnline[name] = true
 				if playersOnlineOld[name] then
 					playersOnlineOld[name] = nil
-				elseif playersOld[name] then
+				elseif not add then
 					connect = true
 				end
 			end
